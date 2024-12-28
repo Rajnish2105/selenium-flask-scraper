@@ -1,0 +1,34 @@
+# Environment files
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+.pytest_cache/
+
+# Selenium
+chromedriver.exe
+geckodriver.exe
+*.log
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Distribution/packaging
+dist/
+build/
+*.egg-info/
+
+# Debug logs
+debug.log
+*.log

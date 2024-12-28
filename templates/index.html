@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trending Topics</title>
+  </head>
+  <body>
+    <h1>Twitter Trends</h1>
+    <button onclick="fetchTrends()">Click to Fetch Trends</button>
+    <div id="results"></div>
+
+    <script>
+      async function fetchTrends() {
+        const response = await fetch("/run-selenium");
+        const data = await response.json();
+        document.getElementById("results").innerHTML = `
+                <h3>Trends Fetched at: ${data.timestamp}</h3>
+                <ul>
+                    <li>${data.trend1}</li>
+                    <li>${data.trend2}</li>
+                    <li>${data.trend3}</li>
+                    <li>${data.trend4}</li>
+                    <li>${data.trend5}</li>
+                </ul>
+                <p>IP Address: ${data.ip_address}</p>
+            `;
+      }
+    </script>
+  </body>
+</html>
